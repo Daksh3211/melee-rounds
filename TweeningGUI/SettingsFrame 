@@ -1,0 +1,20 @@
+local Btn = script.Parent
+local frame = script.Parent.Parent
+local back = script.Parent.Parent.BackButton
+Btn.Visible = false
+wait(6)
+Btn.Visible = true
+Btn.Position = UDim2.new(0.629, 0, 1)
+Btn:TweenPosition(UDim2.new(0.629, 0,0.018, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint,2)
+ 
+local Bg = script.Parent.Parent.Parent.SettingsFrame
+Bg.Visible = false
+ 
+Btn.MouseButton1Click:Connect(function()
+    frame:TweenPosition(UDim2.new(-0.60, 0,0.19, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint,2)
+    back.Visible = true
+    Bg.Position = UDim2.new(0.336, 0, 1)
+    Bg:TweenPosition(UDim2.new(0.336, 0,0.246, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint,2)
+    Bg.Visible = true
+    wait(1)
+end)
